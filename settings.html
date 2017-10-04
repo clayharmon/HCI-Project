@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel='stylesheet' id='ui-text-css'  href='style.css?v=0.01' type='text/css' media='all' />
+    <title>Courier Dashboard</title>
+</head>
+
+<body>
+    <header>
+        <div id="back"><i class="fa fa-angle-left ani" aria-hidden="true"></i><span>Back</span></div>
+        <div id="stationid"></div>
+        <a id="settingsbtn" href="javascript:void(0);">
+            <i class="fa fa-cog" aria-hidden="true"></i>
+        </a>
+        <a id="logbtn" class="" href="javascript:void(0);">
+            <i class="fa fa-tasks" aria-hidden="true"></i>
+        </a>
+
+    </header>
+    <section class="settings">
+        <div data-id="1" class="settings-page popbox">
+            <div class="courier-header">
+                <a id="popup-close" href="javascript:void(0);">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </a>
+                <div class="spacer" style="clear: both;"></div>
+                <h1>Settings</h1>
+        </div>
+            <div class="settings-info">
+                <h2 class="weight">Alert me when:</h2>
+                <h2>a station's exceptions reach (in %):</h2>
+                <div class="range-container">
+                    <div class="range"><input id="ex-slider" type="range" min="1" max="9" steps="1" value="5"></div>
+                    <ul class="range-points">
+                        <li>1</li><li>5</li><li>10</li><li>15</li><li>20</li><li>25</li><li>30</li><li>35</li><li>40</li>
+                    </ul>
+                <h2>a station's late deliveries reach (in %):</h2>
+                <div class="range-container">
+                    <div class="range"><input id="late-slider" type="range" min="1" max="9" steps="1" value="5"></div>
+                    <ul class="range-points">
+                        <li>1</li><li>5</li><li>10</li><li>15</li><li>20</li><li>25</li><li>30</li><li>35</li><li>40</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</body>
+</html>

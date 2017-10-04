@@ -1,0 +1,27 @@
+{
+    "stations":[
+        {"id":"1","name":"Columbus","status":"running","phone":"000-000-0000","image_id":"none.jpg","packages":"321","exceptions":"24","delivered":"24","late":"27","location":"someplace","p":["1","3","4","6","7","8","9","11"],"c":["1","2"]},
+        {"id":"2","name":"Starkville","status":"running","phone":"000-000-0000","image_id":"none.jpg","packages":"321","exceptions":"24","delivered":"24","late":"27","location":"someplace","p":["2","5","12","13"],"c":["1","2"]}
+    ],
+    "couriers":[
+        {"id":"1","fname":"Mike","lname":"Smith","status":"en route","phone":"000-000-0000","image_id":"none.jpg","packages":"321","exceptions":"24","delivered":"24","late":"27","location":"someplace"},
+        {"id":"2","fname":"Harry","lname":"Williams","status":"en route","phone":"000-000-0000","image_id":"none.jpg","packages":"3231","exceptions":"224","delivered":"243","late":"272","location":"someplace"}
+    ],
+    "packages":[
+        {"id":"1","status":"delivered","courier":"Mike Smith","courier_id":"1","time":"4/13/17 8:53am","type":"Next Day"},
+        {"id":"2","status":"exception","courier":"Mike Smith","courier_id":"1","time":"4/13/17 8:53am","type":"Next Day"},
+        {"id":"3","status":"late","courier":"Mike Smith","courier_id":"1","time":"4/13/17 8:53am","type":"Next Day"},
+        {"id":"4","status":"enroute","courier":"Harry Williams","courier_id":"2","time":"4/13/17 8:53am","type":"Next Day"},
+        {"id":"5","status":"delivered","courier":"Mike Smith","courier_id":"1","time":"4/13/17 8:53am","type":"Next Day"},
+        {"id":"6","status":"delivered","courier":"Mike Smith","courier_id":"1","time":"4/13/17 8:53am","type":"Next Day"},
+        {"id":"7","status":"exception","courier":"Mike Smith","courier_id":"1","time":"4/13/17 8:53am","type":"Next Day"},
+        {"id":"8","status":"late","courier":"Mike Smith","courier_id":"1","time":"4/13/17 8:53am","type":"Next Day"},
+        {"id":"9","status":"enroute","courier":"Harry Williams","courier_id":"2","time":"4/13/17 8:53am","type":"Next Day"},
+        {"id":"10","status":"delivered","courier":"Mike Smith","courier_id":"1","time":"4/13/17 8:53am","type":"Next Day"},
+        {"id":"11","status":"delivered","courier":"Mike Smith","courier_id":"1","time":"4/13/17 8:53am","type":"Next Day"},
+        {"id":"12","status":"exception","courier":"Mike Smith","courier_id":"1","time":"4/13/17 8:53am","type":"Next Day"},
+        {"id":"13","status":"late","courier":"Mike Smith","courier_id":"1","time":"4/13/17 8:53am","type":"Next Day"},
+        {"id":"14","status":"enroute","courier":"Harry Williams","courier_id":"2","time":"4/13/17 8:53am","type":"Next Day"},
+        {"id":"15","status":"delivered","courier":"Mike Smith","courier_id":"1","time":"4/13/17 8:53am","type":"Next Day"}
+    ]
+}

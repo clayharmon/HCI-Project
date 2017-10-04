@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel='stylesheet' id='ui-text-css'  href='style.css?v=0.01' type='text/css' media='all' />
+    <title>Courier Dashboard</title>
+</head>
+
+<body class="no-log">
+    <header>
+        <div id="back" style="display: none"><i class="fa fa-angle-left ani" aria-hidden="true"></i><span>Stations</span></div>
+        <div id="stationid"></div>
+        <a id="settingsbtn" href="javascript:void(0);">
+            <i class="fa fa-cog" aria-hidden="true"></i>
+        </a>
+        <a id="logbtn" style="display: none" class="" href="javascript:void(0);">
+            <span>2</span>
+            <i class="fa fa-tasks" aria-hidden="true"></i>
+        </a>
+
+    </header>
+    <div class="upper">
+        <div class="optionbar" style="display: none;">
+            <div class="inner">
+                    <span class="left stationmenu">
+                        <a href="javascript:void(0);">Overview</a><a href="javascript:void(0);">Packages</a><a href="javascript:void(0);">Couriers</a>
+                    </span>
+                    <span class="right">
+                        <h2>Filter <select><option>All</option></select></h2>
+                    </span>
+                    <div class="spacer" style="clear: both;"></div>
+            </div>
+        </div>
+    </div>
+    <section class="">
+        <div class="container">
+            
+        </div>
+    </section><aside>
+        <div class="inner">
+            <h1 id="alert-message">Alerts</h1>
+            <div class="alerts">
+                <div class="row">
+                    <i class="fa fa-window-close alert-close" aria-hidden="true"></i><div class="alert">
+                        <span class="left">Columbus Station: 20% of Packages are Exceptions.</span><span class="right">10:30</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <i class="fa fa-window-close alert-close" aria-hidden="true"></i><div class="alert">
+                        <span class="left">Columbus Station: 20% of Packages are Exceptions.</span><span class="right">10:30</span>
+                    </div>
+                </div>
+            </div>
+            <h1>Activity Log</h1>
+            <div class="log">
+                
+                <div class="row">
+                    <span class="left"><a href="javascript:void(0);" data-url="/station/1/couriers/1">Mike Smith</a> has delivered <a href="javascript:void(0);" data-url="/station/1/packages/8">package id 8</a> on time.</span><span class="right">8:30</span>
+                </div>
+                <div class="row">
+                    <span class="left"><a href="javascript:void(0);" data-url="/station/1/couriers/1">Mike Smith</a> has delivered <a href="javascript:void(0);" data-url="/station/1/packages/8">package id 8</a> on time.</span><span class="right">8:30</span>
+                </div>
+                <div class="row">
+                    <span class="left"><a href="javascript:void(0);" data-url="/station/1/couriers/1">Mike Smith</a> has delivered <a href="javascript:void(0);" data-url="/station/1/packages/8">package id 8</a> on time.</span><span class="right">8:30</span>
+                </div>
+                <div class="row">
+                    <span class="left"><a href="javascript:void(0);" data-url="/station/1/couriers/1">Mike Smith</a> has delivered <a href="javascript:void(0);" data-url="/station/1/packages/8">package id 8</a> on time.</span><span class="right">8:30</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <div class="black-bg"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="script.js?v=0.01"></script>
+</body>
+</html>

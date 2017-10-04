@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel='stylesheet' id='ui-text-css'  href='style.css?v=0.01' type='text/css' media='all' />
+    <title>Courier Dashboard</title>
+</head>
+
+<body>
+    <header>
+        <div id="back"><i class="fa fa-angle-left ani" aria-hidden="true"></i><span>Back</span></div>
+        <div id="stationid"></div>
+        <a id="settingsbtn" href="javascript:void(0);">
+            <i class="fa fa-cog" aria-hidden="true"></i>
+        </a>
+        <a id="logbtn" class="" href="javascript:void(0);">
+            <i class="fa fa-tasks" aria-hidden="true"></i>
+        </a>
+
+    </header>
+    <div class="upper">
+        <div class="optionbar">
+            <div class="inner">
+                    <span class="left stationmenu">
+                        <a class="active" href="javascript:void(0);">Overview</a><a href="javascript:void(0);">Packages</a><a href="javascript:void(0);">Couriers</a>
+                    </span>
+                    <span class="right filter">
+                        <h2>
+                            <span>Filter</span>
+                            <select>
+                                <option>All</option>
+                                <option>On Time</option>
+                                <option>Late</option>
+                                <option>Exceptions</option>
+                            </select>
+                        </h2>
+                    </span>
+                    <div class="spacer" style="clear: both;"></div>
+            </div>
+        </div>
+    </div>
+    <section class="">
+        <div class="container">
+            
+        </div>
+    </section>
+    <aside>
+        <div class="inner">
+            <div class="row">
+                <span class="left"><a href="javascript:void(0);" data-url="/station/2/courers/1">Mike Smith</a> has delivered <a href="javascript:void(0);" data-url="/station/2/packages/8">package id 8</a> on time.</span><span class="right">8:30</span>
+                <div class="spacer" style="clear: both;"></div>
+            </div>
+            <div class="row">
+                <span class="left"><a href="javascript:void(0);" data-url="/station/2/courers/1">Mike Smith</a> has delivered <a href="javascript:void(0);" data-url="/station/2/packages/8">package id 8</a> on time.</span><span class="right">8:30</span>
+                <div class="spacer" style="clear: both;"></div>
+            </div>
+            <div class="row">
+                <span class="left"><a href="javascript:void(0);" data-url="/station/2/courers/1">Mike Smith</a> has delivered <a href="javascript:void(0);" data-url="/station/2/packages/8">package id 8</a> on time.</span><span class="right">8:30</span>
+                <div class="spacer" style="clear: both;"></div>
+            </div>
+            <div class="row">
+                <span class="left"><a href="javascript:void(0);" data-url="/station/2/courers/1">Mike Smith</a> has delivered <a href="javascript:void(0);" data-url="/station/2/packages/8">package id 8</a> on time.</span><span class="right">8:30</span>
+                <div class="spacer" style="clear: both;"></div>
+            </div>
+        </div>
+    </aside>
+    
+    <footer class="alerts">
+        
+        <div class="inner">
+            <h1 class="white"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> <span>Columbus Station: 20% of Packages are Exceptions</span></h1>
+            <div class="white close"><i class="fa fa-times" aria-hidden="true"></i><span>Close</span></div>
+        </div>
+    </footer>
+    
+    <div class="courier popbox">
+        <div class="courier-header">
+            <a href="#"><i class="fa fa-times" aria-hidden="true"></i></a>
+            <div class="spacer" style="clear: both;"></div>
+            <h1><span>Andrew</span>Williams</h1>
+        </div>
+        <div class="courier-info">
+            <div class="courier-picture">
+                <img height="100" width="100" src="no-user-image.gif"/>
+            </div>
+            <div class="courier-contact">
+                <h2>Status: En Route</h2>
+                <h2>Phone: 000-000-0000</h2>
+            </div>
+        </div>
+        <div class="courier-packages">
+            <div class="courier-total"><h2>162<span>Total</span>162<span>Remaining</span></h2></div>
+            <div class="courier-boxes">
+                <h2>Exceptions</h2>
+                <h2 class="number">282</h2>
+            </div><div class="courier-boxes">
+                <h2>Late</h2>
+                <h2 class="number">182</h2>
+            </div><div class="courier-boxes">
+                <h2>On Time</h2>
+                <h2 class="number">119</h2>
+            </div>
+        </div>
+    </div>
+    <div class="black-bg"></div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</body>
+</html>

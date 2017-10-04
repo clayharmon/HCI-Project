@@ -1,0 +1,805 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    background: #34495e;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, p {
+    font-family: inherit;
+    margin: 0;
+    color: #34495e;
+    font-weight: 600;
+}
+.white {
+    color: white;
+}
+.container h1.white{
+    margin: 50px auto 0;
+    width: 90%;
+    text-align: center;
+    font-weight: 300;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    background: #2c3e50;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-family: 'Open Sans';
+    font-size: 16px;
+    padding: 6px;
+    border: 3px solid #7f8c8d;
+    margin: 5px;
+    text-align: center;
+    vertical-align: middle;
+    color: #34495e;
+    text-transform: capitalize;
+}
+
+#settingsbtn {
+    float: right;
+    font-size: 22px;
+    padding: 10px 14px;
+    color: white;
+}
+
+#logbtn {
+    float: right;
+    font-size: 22px;
+    padding: 10px 14px;
+    color: white;
+    background: none;
+    position: relative;
+}
+
+#logbtn span {
+    position: absolute;
+    background: red;
+    display: block;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    top: 7px;
+    right: 8px;
+    font-size: 10px;
+    color: white;
+    padding: 1px 0px;
+    font-weight: 600;
+    text-align: center;
+}
+
+#logbtn.active {
+    color: #2c3e50;
+    background: white;
+}
+
+#back {
+    font-size: 15px;
+    text-transform: uppercase;
+    float: left;
+    padding: 12px 20px 12px 5px;
+    color: white;
+    cursor: pointer;
+}
+
+#back:hover i {
+    transform: translateX(-5px);
+}
+
+#back i {
+    font-size: 26px;
+    padding: 0px 10px;
+}
+
+#back i, span{
+    vertical-align: middle;
+}
+
+.loginform {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.loginform .inner {
+    display: inline-block;
+    max-width: 500px;
+    width: 90%;
+    min-width: 300px
+}
+
+input[type="text"], input[type="submit"]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    font-size: 18px;
+    padding: 20px;
+    display: block;
+    margin: 10px 0;
+    width: 100%;
+    font-family: inherit;
+}
+input[type="submit"] {
+    background: #7f8c8d;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+section {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 100px;
+    height: auto;
+    width: 75%;
+    padding: 20px;
+}
+
+.fixed {
+    height: calc(100% - 100px);
+}
+
+.fixed_tall {
+    height: calc(100% - 114px);
+    margin-top: 114px;
+}
+
+.ani {
+    transition: all 0.5s;
+}
+
+.optionbar {
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    width: 75%;
+    top: 50px;
+    padding: 15px 35px;
+    background: #34495e;
+}
+
+.stationmenu a{
+    padding: 15px;
+    display: inline-block;
+    font-size: 15px;
+    color: #2c3e50;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.1s;
+    
+}
+
+.stationmenu a:hover{
+    background: #bdc3c7;
+}
+
+.stationmenu a.active {
+    color: white;
+    background: #7f8c8d;
+}
+
+.searchbar {
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    width: 75%;
+    top: 50px;
+    padding: 15px 35px;
+    background: #34495e;
+}
+
+.searchbar i {
+    font-size: 28px;
+    color: #bdc3c7;
+    padding: 18px 8px 18px 16px;
+}
+
+.searchbar input {
+    float: right;
+    width: calc(100% - 50px);
+    margin: 0;
+}
+
+.container {
+    height: 100%;
+}
+
+#stationid h1 {
+    float: left;
+    font-size: 28px;
+    color: white;
+    font-weight: 400;
+    padding: 6px 0;
+}
+
+#stationid span {
+    font-size: 18px;
+    vertical-align: top;
+    font-weight: 300;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 9px 0px 0;
+}
+
+aside {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 3;
+    display: inline-block;
+    vertical-align: top;
+    width: 25%;
+    height: 100%;
+    background: white;
+    color: #2c3e50;
+}
+
+aside h1{
+    padding: 5px;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+}
+
+aside .inner {
+    padding: 50px 0 10px;
+    height: 100%;
+}
+
+aside .log .row {
+    padding: 10px 15px;
+    opacity: 0.8;
+    transition: all 0.3s;
+}
+
+aside .log .row:hover {
+    opacity: 1;
+}
+
+aside .alerts .alert, aside .alerts i {
+    opacity: 0.8;
+    transition: all 0.3s;
+}
+
+aside .alerts .alert:hover {
+    opacity: 1;
+}
+
+aside .alerts i:hover {
+    opacity: 1;
+}
+
+aside .log .row:nth-child(even) {
+    background: #ecf0f1;
+}
+
+aside .log .row:nth-child(odd) {
+    background: white;
+}
+
+aside .alerts .row:nth-child(even) .alert {
+    background: #c0392b;
+}
+
+aside .alerts .row:nth-child(odd) .alert {
+    background: #e74c3c;
+}
+
+aside .alerts .row:nth-child(even) {
+    background: white;
+}
+
+aside .alerts .row:nth-child(odd) {
+    background: #ecf0f1;
+}
+
+aside .log {
+    overflow: auto;
+    max-height: calc(50% - 32px);
+}
+
+aside .alerts {
+    color: white;
+    max-height: calc(50% - 32px);
+    overflow: auto;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+aside .alerts .alert{
+    cursor: pointer;
+}
+
+aside .alerts .row {
+    padding: 0;
+}
+
+aside .left {
+    float: none;
+    display: inline-block;
+    width: 80%;
+    vertical-align: middle
+}
+
+aside .alerts i {
+    display: inline-block;
+    color: #c0392b;
+    padding: 20px;
+    width: 15%;
+    text-align: center;
+    cursor: pointer;
+}
+
+aside .alerts .alert {
+    display: inline-block;
+    width: 85%;
+}
+
+aside .alerts .left {
+    padding: 20px 0 20px 15px;
+}
+aside .alerts .right {
+    padding: 20px 15px 20px 0;
+}
+
+aside .right {
+    float: none;
+    display: inline-block;
+    width: 20%;
+    vertical-align: middle;
+    text-align: right;
+    font-size: 14px;
+}
+
+aside a {
+    color: inherit;
+}
+
+aside .log a:hover {
+    color: black;
+}
+
+aside .alerts a:hover {
+    color: #ecf0f1;
+}
+
+
+
+.no-log {
+    position: static;
+}
+
+.no-log .optionbar, .no-log section, .no-log .searchbar{
+    width: 100%;
+}
+
+.no-log aside {
+    display: none;
+}
+
+.right {
+    float: right;
+    vertical-align: middle;
+}
+.left {
+    float: left;
+    vertical-align: middle;
+}
+
+.tile {
+    display: inline-block;
+    vertical-align: top;
+    padding: 15px;
+    width: 33.333%;
+    height: auto;
+    background: none;
+    cursor: pointer;
+    text-align: left;
+}
+
+.tile.half {
+    width: 50%;
+}
+
+.tile:hover {
+    opacity: 0.8;
+}
+
+.tile:hover .arrow i {
+    transform: translateX(5px);
+}
+
+.tile .inner, .optionbar .inner, .searchbar .inner {
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+
+.tile .badge {
+    background: #7f8c8d;
+    text-transform: uppercase;
+    color: white;
+    font-size: 12px;
+}
+
+.tile .badge .center {
+    width: 90%;
+    padding: 5px 0;
+    margin: 0 auto; 
+}
+
+.tile .hgroup {
+    width: 90%;
+    margin: 20px auto 15px;
+}
+
+.tile .status {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.tile .status span {
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.tile .name {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+.tile .numbers {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.tile .numbers span{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.tile h2 {
+    text-transform: uppercase;
+    font-size: 16px;
+}
+.tile h2 span {
+    font-weight: 300;
+}
+
+.tile .arrow {
+    text-transform: uppercase;
+    margin: 10px 0;
+    color: #7f8c8d;
+    display: block;
+}
+
+.tile .arrow span {
+    font-size: 80%;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.tile .arrow i {
+    vertical-align: middle;
+}
+
+.tile.station .badge {
+    font-size: 16px;
+}
+.tile.station .badge .center{
+    padding: 0px;
+}
+
+.tile.station .badge .right {
+    padding: 5px 10px;
+}
+.tile.station .badge .left {
+    padding: 7px;
+    font-size: 13px;
+}
+
+
+
+.tile.overview {
+    text-align: center;
+}
+
+.tile.overview .hgroup{
+    margin: 10px auto 15px;
+}
+
+.tile.overview h1.name{
+    font-size: 50px;
+}
+
+.black-bg {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 900;
+    background: black;
+    opacity: 0.7;
+}
+
+.popbox {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 450px;
+    background: white;
+    z-index: 1000;
+    padding: 10px;
+    transition: all 0.3s;
+    border-radius: 15px;
+}
+
+.popbox .courier-header a {
+    color: #34495e;
+    float: right;
+    font-size: 24px;
+    margin: 10px 20px;
+}
+
+.popbox .courier-header h1{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.popbox .courier-header h1 span {
+    margin-right: 10px;
+    font-weight: 300;
+    vertical-align: top;
+}
+
+.popbox .courier-info .courier-contact h2 {
+    font-size: 18px;
+    text-align: left;
+}
+
+.popbox .courier-info .courier-picture {
+    margin-right: 20px;
+}
+
+.popbox .courier-info {
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.popbox .courier-info .courier-contact, .courier-page .courier-info .courier-picture {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.courier-total, .packages-info {
+    background: #34495e;
+    text-align: center;
+    padding: 5px;
+}
+
+.courier-total h2, .packages-info h2{
+    color: white;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.courier-total h2 span, .packages-info h2 span {
+    text-transform: uppercase;
+    vertical-align: top;
+    font-weight: 300;
+    margin: 0 10px;
+}
+
+.packages-info {
+    text-align: left;
+    padding: 10px;
+}
+
+.packages-info h2 {
+    margin: 5px;
+    font-weight: 400;
+}
+
+.packages-info a {
+    color: white;
+}
+
+.settings-info {
+    padding: 0 10px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.settings-info h2{
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.settings-info h2.weight {
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #7f8c8d;
+    margin: 0 0 15px;
+}
+
+.courier-boxes {
+    display: inline-block;
+    width: 33.333%;
+    background: #7f8c8d;
+    border-right: 2px solid white;
+    text-align: center;
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+.courier-boxes h2 {
+    text-transform: uppercase;
+    font-size: 16px;
+    color: white;
+}
+
+.courier-boxes h2.number {
+    font-size: 32px;
+}
+
+.courier-boxes:last-child{
+    border: 0px solid white;
+}
+
+.filter span{
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.range-container {
+    padding: 20px 0;
+}
+
+.range {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+.range input {
+    -webkit-appearance: none;
+    outline: none;
+    width: 92.55%;
+}
+
+.range input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 28px;
+  height: 28px;
+  margin: -13px 0  0;
+  border-radius: 50%;
+  background: #34495e;
+  cursor: pointer;
+  border: 0 !important;
+}
+
+.range input::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    background: #b2b2b2;
+}
+
+.range-points {
+    margin: 5px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.range-points li {
+    display: inline-block;
+    position: relative;
+    width: calc(100% / 9);
+    font-size: 14px;
+    text-align: center;
+}
+
+.range-points li:before{
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: -18px;
+    content: '';
+    width: 9px;
+    height: 9px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: #b2b2b2;
+}
+
+
+
+@media only screen and (min-width : 850px) and (max-width : 1300px) {
+    .tile {
+        width: 50%;
+    }
+    section, .optionbar {
+        width: 60%;
+    }
+    aside {
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width : 600px) and (max-width : 850px) {
+    .tile {
+        width: 50%;
+    }
+    section, .optionbar {
+        width: 100%;
+    }
+    aside {
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width : 600px) {
+    .stationmenu a{
+        font-size: 14px;
+    }
+    
+    #back span{
+        display: none;
+    }
+    
+    .popbox {
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        border-radius: 0px;
+    }
+    .optionbar, .searchbar {
+        padding: 0;
+    }
+    .optionbar .left, .optionbar .right {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .optionbar .right h2{
+        border-top: 1px solid lightgray;
+        margin: 5px 10px;
+    }
+    
+    .tile {
+        width: 100%;
+    }
+    section, .optionbar {
+        width: 100%;
+    }
+    aside {
+        width: 100%;
+    }
+}
+
